@@ -1,0 +1,80 @@
+Ref#:	Instruction:		Format:		Opcode:		Effect:
+____________________________________________________________________________________________
+1.	ADDF m			3/4		58		F <- (F)+(m..m+5)
+2.	ADDR r1,r2		2		90		r2 <- (r2) + (r1)
+3.	CLEAR r1		2		4		r1 <- 0
+4.	COMPF m			3/4		88		(F) : (m..m+5)
+5.	COMPR r1,r2		2		A0		(r1) : (r2)
+6.	DIVF m			3/4		64		F <- (F) / (m..m+5)
+7.	DIVR r1,r2		2		9C		(r2) <- (r2) / (r1)
+8.	FIX			1		C4		A <- (F)
+9.	FLOAT			1		C0		F <- (A)
+10.	HIO			1		F4		(A)
+11.	LDB m			3/4		68		B <- (m..m+2)
+12.	LDF m			3/4		70		F <- (m..m+5)
+13.	LDS m			3/4		6C		S <- (m..m+2)
+14.	LDT m			3/4		74		T <- (m..m+2)
+15.	LPS m			3/4		D0		m
+16.	MULF m			3/4		60		(f) <- (F) * (m..m+5)
+17.	MULR r1,r2		2		98		r2 <- (r2) * (r1)
+18.	NORM			1		C8		F <- (F)
+19.	RMO r1,r2		2		AC		r2 <- (r1)
+20.	SHIFTL r1,n		2		A4		r1 <- (r1)
+21.	SHIFTR r1,n		2		A8		r1 <- (r1)
+22.	SIO			1		FO		(A)
+23.	SSK m			3/4		EC		m <- (A)
+24.	STB m			3/4		78		m..m+2 <- (B)
+25.	STF m			3/4		80		m..m+5 <- (F)
+26.	STI m			3/4		D4		T <- (m..m+2)
+27.	STS m			3/4		7C		m..m+2 <- (S)
+28.	STT m			3/4		84		m..m+2 <- (T)
+29.	SUBF m			3/4		5C		F <- (F) = (m..m+5)
+30.	SUBR r1,r2		2		94		r2 <- (r2) - (r1)
+31.	SVC n			2		B0		R1 = n
+32.	TIO			1		F8		(A)
+33.	TIXR r1			2		B8		X <- (X) + 1 : (r1)	
+____________________________________________________________________________________________
+
+--------------------------------------------------------------------------------------------
+
+1 Byte XE Instructions:
+________________________
+8.	FIX
+9.	FLOAT
+10.	HIO
+18.	NORM
+22.	SIO
+32.	TIO
+
+2 Byte XE Instructions:
+________________________
+2.	ADDR
+3.	CLEAR
+5.	COMPR
+7.	DIVR
+17.	MULR
+19.	RMO
+20.	SHIFTL
+21.	SHIFTR
+30.	SUBR
+31.	SVC
+33.	TIXR
+
+3/4 Byte XE Instructions:
+_________________________
+1.	ADDF
+4.	COMPF
+6.	DIVF
+11.	LDB
+12.	LDF
+13.	LDS
+14.	LDT
+15.	LPS
+16.	MULF
+23.	SSK
+24.	STB
+25.	STF
+26.	STI
+27.	STS
+28.	STT
+29.	SUBF
